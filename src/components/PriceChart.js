@@ -45,7 +45,7 @@ const PriceChart = () => {
       {/* Price chart goes here */}
 
       {!account ? (
-        <Banner text={'Please connect with Metamask'}/>
+        <Banner text={'Please connect with Metamask'} />
       ) : (
         <Chart 
           type='candlestick'
