@@ -74,7 +74,8 @@ const DEFAULT_EXCHANGE_STATE = {
 	loaded: false,
 	contract: {},
 	transaction: {
-		isSuccessful: false
+		isSuccessful: false,
+		isError: false
 	},
 	allOrders: {
 		loaded: false,
@@ -270,6 +271,7 @@ export const exchange = (state = DEFAULT_EXCHANGE_STATE, action) => {
 				},
 				transferInProgress: false
 			}
+
 
 		// -----------------------------------------------------------------------------
 		// MAKING ORDER CASES

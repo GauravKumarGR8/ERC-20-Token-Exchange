@@ -136,14 +136,14 @@ export const transferTokens = async (provider, exchange, transferType, token, am
 			transaction = await token.connect(signer).approve(exchange.address, amountToTransfer)
 			await transaction.wait()
 			transaction = await exchange.connect(signer).depositToken(token.address, amountToTransfer)
+			await transaction.wait()
 		} else {
 			transaction = await exchange.connect(signer).withdrawToken(token.address, amountToTransfer)
+			await transaction.wait()
 		}
 
-		await transaction.wait()
-
 	} catch (error) {
-		dispatch({ type: 'TRANSFER_FAIL '})
+		dispatch({ type: 'TRANSFER_FAIL' })
 	}
 }
 
