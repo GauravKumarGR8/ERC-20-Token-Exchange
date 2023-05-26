@@ -46,7 +46,7 @@ async function main() {
   const user2 = accounts[1]
   amount = tokens(10000)
 
-  // user1 approves 10,000 Dapp...
+  // user1 approves 10,000 GR8...
   transaction = await GR8.connect(user1).approve(exchange.address, amount)
   await transaction.wait()
   console.log(`Approved ${amount} tokens from ${user1.address}\n`)
