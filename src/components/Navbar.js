@@ -32,7 +32,13 @@ const Navbar = () => {
   return(
     <div className='exchange__header grid'>
       <div className='exchange__header--brand flex'>
-      	<img src={logo} className='logo' alt='Random Logo'></img>
+      	<a href="https://www.flaticon.com/free-icons/tokens"
+      		title="tokens icons"
+      		target='_blank'
+      		rel='noreferrer'
+      	>
+      		<img src={logo} className='logo' alt='Random Logo'></img>
+      	</a>
       	<h1>GR8 Token Exchange</h1>
       </div>
 
